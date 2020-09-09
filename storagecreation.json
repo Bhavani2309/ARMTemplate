@@ -4,7 +4,7 @@
 	"resources": [{
 		"type": "Microsoft.Storage/storageAccounts",
 		"apiVersion": "2019-06-01",
-		"name": "bhavanistorage",
+		"name": "__bhavanistorage__",
 		"location": "EastUS",
 		"sku": {
 			"name": "Standard_LRS",
