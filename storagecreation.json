@@ -4,16 +4,22 @@
 	"parameters": {
 		"storageAccountName": {
 		    "type": "string"
+		},
+		"location" : {
+			"type" : "string"
+		},
+		"tier" : {
+			 "type" : "string"
 		}
-	    },
+	},
 	"resources": [{
 		"type": "Microsoft.Storage/storageAccounts",
 		"apiVersion": "2019-06-01",
 		"name": "[parameters('storageAccountName')]",
-		"location": "EastUS",
+		"location": "[parameters('location')]",
 		"sku": {
 			"name": "Standard_LRS",
-			"tier": "Standard"
+			"tier": "[parameters('tier')]"
 		},
 		"kind": "StorageV2",
 		"properties": {
